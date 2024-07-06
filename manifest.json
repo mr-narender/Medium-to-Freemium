@@ -1,0 +1,48 @@
+{
+    "manifest_version": 3,
+    "name": "Medium to Freemium",
+    "version": "0.0.1",
+    "icons": {
+        "16": "icon/icon16.png",
+        "32": "icon/icon32.png",
+        "48": "icon/icon48.png",
+        "128": "icon/icon128.png"
+    },
+    "background": {
+        "service_worker": "service_worker.js",
+        "type": "module"
+    },
+    "action": {
+        "default_title": "Medium to Freemium",
+        "default_icon": {
+            "16": "icon/icon16.png",
+            "32": "icon/icon32.png",
+            "48": "icon/icon48.png",
+            "128": "icon/icon128.png"
+        }
+    },
+    "permissions": [
+        "contextMenus",
+        "runtime",
+        "scripting",
+        "*://*/*",
+        "tabs",
+        "webNavigation"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://freedium.cfd/*"
+            ],
+            "js": [
+                "qrcode.min.js",
+                "content_script.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "host_permissions": [
+        "http://medium.com/*",
+        "https://medium.com/*"
+    ]
+}
