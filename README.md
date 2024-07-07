@@ -42,3 +42,6 @@ If you appreciate this extension and want to support the development, you can ma
 
 Let me know if you need any more adjustments or additions!
 ## Unfortunately, I can't host on Google Extension (as they demand Developer Fee)
+
+### Note:
+Actual paywall override work is done on https://freedium.cfd/, and I dont own it's code, credits to author for that. Cheers.
